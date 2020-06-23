@@ -1,9 +1,15 @@
 import { AsyncStorage } from 'react-native';
 export const AUTHENTICATE = 'AUTHENTICATE';
 export const LOGOUT = 'LOGOUT';
+export const SET_DID_TRY_AL = 'SET_DID_TRY_AL';
+
 import { API_FIREBASE } from 'react-native-dotenv';
 
 let timer;
+
+export const setDidTRyAL = () => {
+  return { type: SET_DID_TRY_AL };
+};
 
 export const authenticate = (userId, token, expiryTime) => {
   return (dispatch) => {
